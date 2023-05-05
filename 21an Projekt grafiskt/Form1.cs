@@ -76,7 +76,7 @@ namespace _21an_Projekt_grafiskt
                                 MessageBox.Show("Datorn fick mer poäng än dig, du förlorade", "Du förlorade", MessageBoxButtons.OK, MessageBoxIcon.None);
 
                                 w = 0;
-                                break;
+                                break; //
                                 
                             }
                            
