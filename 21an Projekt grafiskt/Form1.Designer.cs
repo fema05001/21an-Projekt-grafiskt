@@ -40,17 +40,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(87, 20);
+            this.label1.Location = new System.Drawing.Point(61, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 46);
+            this.label1.Size = new System.Drawing.Size(356, 46);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Välkomen till 21:an";
+            this.label1.Text = "Välkomen till Blackjack";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(145, 121);
+            this.label2.Location = new System.Drawing.Point(139, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(164, 28);
             this.label2.TabIndex = 1;
@@ -99,6 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(468, 354);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -106,8 +107,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.Name = "Form1";
-            this.Text = "21:an";
+            this.Text = "Blackjack";
             this.ResumeLayout(false);
             this.PerformLayout();
 
