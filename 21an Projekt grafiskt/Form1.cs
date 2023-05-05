@@ -6,7 +6,10 @@ namespace _21an_Projekt_grafiskt
         {
             InitializeComponent();
         }
-       
+
+        Form2 ac = new Form2();
+
+
 
         //Max värde variabel
         int o = 21;
@@ -15,6 +18,8 @@ namespace _21an_Projekt_grafiskt
         int a = 1;
         int b = 11;
         Random random = new Random();
+
+        //Spelet
         private void button1_Click(object sender, EventArgs e)
         {
             
@@ -43,13 +48,13 @@ namespace _21an_Projekt_grafiskt
                         MessageBox.Show("      Spelare: " + j + "        Dator: " + k, "Poäng", MessageBoxButtons.OK, MessageBoxIcon.None);
                         if (j > o)
                         {
-                            MessageBox.Show("Du gick över gränsen för max antal poäng", "Du förlorade", MessageBoxButtons.OK, MessageBoxIcon.None);
+                            MessageBox.Show("Du gick över gränsen för max antal poäng, du förlorade", "Du förlorade", MessageBoxButtons.OK, MessageBoxIcon.None);
                             break;
                         }
 
                         u = 0;
                     }
-                    if (result2 != DialogResult.No)
+                    if (result2 != DialogResult.Yes)
                     {
                        
                         MessageBox.Show("Nu är det datorns tur att dra kort", "Datorns tur", MessageBoxButtons.OK, MessageBoxIcon.None);
@@ -61,14 +66,14 @@ namespace _21an_Projekt_grafiskt
 
                             if (k > o)
                             {
-                                MessageBox.Show("Datorn gick över gränsen för maxantal poäng", "Du vann", MessageBoxButtons.OK, MessageBoxIcon.None);
+                                MessageBox.Show("Datorn gick över gränsen för maxantal poäng, du vann", "Du vann", MessageBoxButtons.OK, MessageBoxIcon.None);
                                 w = 0;
                                 break;
 
                             }
                             else if (k > j)
                             {
-                                MessageBox.Show("Datorn fick mer poäng än dig", "Du förlorade", MessageBoxButtons.OK, MessageBoxIcon.None);
+                                MessageBox.Show("Datorn fick mer poäng än dig, du förlorade", "Du förlorade", MessageBoxButtons.OK, MessageBoxIcon.None);
 
                                 w = 0;
                                 break;
@@ -84,5 +89,23 @@ namespace _21an_Projekt_grafiskt
                 }
             }
         }
+        //Regler
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Du och datorn kommer att få två slumpmäsiga kort med värdena mellan 1 och 10 Efter det får du val att dra fler kort med slumpmäsiga värden mellan 1 och 10 tills du är nöjd, då är det datorns tur att dra kort. Målet är att ha ett högre värde än datorn och vara så nära värdet 21 som möjligt utan att gå över.om du går över värdet 21 eller om datorn har ett högre number än dig utan att ha gått över 21 så förlorar du. datorn kommer att fortsätta dra kort tills den vunnit eller gått över 21. I inställnings alternaivet kan du ändra saker som svårighetsgrad och max/min värde av korten för att göra spelet svårare eller enklare", "Regler", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        //Instälningar
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            ac.Show();
+        }
+
+        
     }
+    public partial class Form2 : Form
+    {
+        
+    }
+    
 }
