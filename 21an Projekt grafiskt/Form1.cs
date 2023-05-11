@@ -2,9 +2,11 @@ namespace _21an_Projekt_grafiskt
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         Form2 ac = new Form2();
@@ -38,7 +40,8 @@ namespace _21an_Projekt_grafiskt
 
                 while (w ==1)
                 {
-                    
+                    //Dragning av fler kort
+
                     DialogResult result2;
                     result2 = MessageBox.Show("Vill du dra ett kort till?", "Fler kort?", MessageBoxButtons.YesNo, MessageBoxIcon.None);
                     if (result2 == DialogResult.Yes)
@@ -54,9 +57,26 @@ namespace _21an_Projekt_grafiskt
 
                         u = 0;
                     }
+                    //Datorn drar kort
                     if (result2 != DialogResult.Yes)
                     {
-                       
+                        //Kollar ifall du eller datorn redan har vunnit
+                        if (k > o)
+                        {
+                            MessageBox.Show("Datorn gick över gränsen för maxantal poäng, du vann", "Du vann", MessageBoxButtons.OK, MessageBoxIcon.None);
+                            w = 0;
+                            break;
+
+                        }
+                        else if (k > j)
+                        {
+                            MessageBox.Show("Datorn fick mer poäng än dig, du förlorade", "Du förlorade", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                            w = 0;
+                            break; 
+
+                        }
+
                         MessageBox.Show("Nu är det datorns tur att dra kort", "Datorns tur", MessageBoxButtons.OK, MessageBoxIcon.None);
                         while (true)
                         {
@@ -64,6 +84,8 @@ namespace _21an_Projekt_grafiskt
                             k = v + k;
                             MessageBox.Show("      Spelare: " + j + "        Dator: " + k, "Poäng", MessageBoxButtons.OK, MessageBoxIcon.None);
 
+
+                            //Kollar ifal du eller datorn har vunnit
                             if (k > o)
                             {
                                 MessageBox.Show("Datorn gick över gränsen för maxantal poäng, du vann", "Du vann", MessageBoxButtons.OK, MessageBoxIcon.None);
@@ -97,15 +119,19 @@ namespace _21an_Projekt_grafiskt
         //Instälningar
         private void button2_Click(object sender, EventArgs e)
         {
-
-            ac.Show();
+            var myform =new Form3();
+            myform.ShowDialog();
+            
+            
+           
         }
-
-        
+        //Senaste vinnare
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var myform = new Form2();
+            myform.ShowDialog();
+        }
     }
-    public partial class Form2 : Form
-    {
-        
-    }
+    
     
 }

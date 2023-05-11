@@ -58,6 +58,7 @@
             // 
             // button1
             // 
+            this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button1.Location = new System.Drawing.Point(112, 186);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(83, 47);
@@ -68,6 +69,7 @@
             // 
             // button2
             // 
+            this.button2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button2.Location = new System.Drawing.Point(237, 257);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(83, 47);
@@ -78,15 +80,18 @@
             // 
             // button3
             // 
+            this.button3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button3.Location = new System.Drawing.Point(112, 257);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(83, 47);
             this.button3.TabIndex = 4;
             this.button3.Text = "Senaste vinnare";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
+            this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button4.Location = new System.Drawing.Point(237, 186);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(83, 47);
