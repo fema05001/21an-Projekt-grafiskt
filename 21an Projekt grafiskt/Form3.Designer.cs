@@ -30,12 +30,16 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button30 = new System.Windows.Forms.Button();
+            this.button40 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(180, 203);
+            this.label1.Location = new System.Drawing.Point(171, 226);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 15);
             this.label1.TabIndex = 0;
@@ -51,12 +55,59 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Välj ett allternativ";
             // 
+            // button10
+            // 
+            this.button10.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.button10.Location = new System.Drawing.Point(124, 143);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(86, 55);
+            this.button10.TabIndex = 6;
+            this.button10.Text = "button1";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button20
+            // 
+            this.button20.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.button20.Location = new System.Drawing.Point(240, 143);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(86, 55);
+            this.button20.TabIndex = 7;
+            this.button20.Text = "button2";
+            this.button20.UseVisualStyleBackColor = true;
+            // 
+            // button30
+            // 
+            this.button30.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.button30.Location = new System.Drawing.Point(124, 222);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(86, 55);
+            this.button30.TabIndex = 8;
+            this.button30.Text = "button3";
+            this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
+            // 
+            // button40
+            // 
+            this.button40.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.button40.Location = new System.Drawing.Point(240, 222);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(86, 55);
+            this.button40.TabIndex = 9;
+            this.button40.Text = "Tillbaka";
+            this.button40.UseVisualStyleBackColor = true;
+            this.button40.Click += new System.EventHandler(this.button40_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(450, 338);
+            this.Controls.Add(this.button40);
+            this.Controls.Add(this.button30);
+            this.Controls.Add(this.button20);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -72,5 +123,9 @@
 
         private Label label1;
         private Label label2;
+        private Button button10;
+        private Button button20;
+        private Button button30;
+        private Button button40;
     }
 }

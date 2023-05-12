@@ -1,5 +1,18 @@
+
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
 namespace _21an_Projekt_grafiskt
 {
+    
     public partial class Form1 : Form
     {
         
@@ -8,10 +21,18 @@ namespace _21an_Projekt_grafiskt
             InitializeComponent();
             
         }
-
+      
+            public static int yy = 0;
+           
+        
+        
+           
+        
+       
+      
         Form2 ac = new Form2();
-
-
+      
+       
 
         //Max värde variabel
         int o = 21;
@@ -32,7 +53,7 @@ namespace _21an_Projekt_grafiskt
             int j = s + p;
             int k = g + j;
             DialogResult result;
-           result = MessageBox.Show("      Spelare: " + j + "        Dator: " + k,"Poäng"  , MessageBoxButtons.OK, MessageBoxIcon.None);
+           result = MessageBox.Show( "      Spelare: " + j + "        Dator: " + k,"Poäng"  , MessageBoxButtons.OK, MessageBoxIcon.None);
             if (result == DialogResult.OK)
             {
                 //avbrytningsvariabel
@@ -116,20 +137,30 @@ namespace _21an_Projekt_grafiskt
         {
             MessageBox.Show("Du och datorn kommer att få två slumpmäsiga kort med värdena mellan 1 och 10 Efter det får du val att dra fler kort med slumpmäsiga värden mellan 1 och 10 tills du är nöjd, då är det datorns tur att dra kort. Målet är att ha ett högre värde än datorn och vara så nära värdet 21 som möjligt utan att gå över.om du går över värdet 21 eller om datorn har ett högre number än dig utan att ha gått över 21 så förlorar du. datorn kommer att fortsätta dra kort tills den vunnit eller gått över 21. I inställnings alternaivet kan du ändra saker som svårighetsgrad och max/min värde av korten för att göra spelet svårare eller enklare", "Regler", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        //variabel för inställningar
+       
+
+        
         //Instälningar
         private void button2_Click(object sender, EventArgs e)
         {
             var myform =new Form3();
             myform.ShowDialog();
-            
-            
            
+           
+
+
         }
         //Senaste vinnare
         private void button3_Click(object sender, EventArgs e)
         {
             var myform = new Form2();
             myform.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(yy+ "     h","test");
         }
     }
     

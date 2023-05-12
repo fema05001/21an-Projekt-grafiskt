@@ -19,6 +19,7 @@ namespace _21an_Projekt_grafiskt
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            
 
         }
     }
