@@ -27,12 +27,13 @@ namespace _21an_Projekt_grafiskt
         {
             this.Hide();
         }
-        //lyckat test
+        //Max/Min värde av kort
         private void button30_Click(object sender, EventArgs e)
         {
-            int u = 6;
+            var myyform = new Form5();
+             myyform.ShowDialog();
 
-             Form1.yy =u;
+            
            
         }
 

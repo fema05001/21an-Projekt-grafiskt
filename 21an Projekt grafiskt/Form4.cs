@@ -4,31 +4,26 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//senaste vinnare  inskrivning form
 namespace _21an_Projekt_grafiskt
 {
-    
-    public partial class Form2 : Form
+    public partial class Form4 : Form
     {
-        public Form2()
+        public Form4()
         {
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
-            label1.Text = Form1.xx;
-
-        }
-        //Tillbaka
-        private void button100_Click(object sender, EventArgs e)
-        {
-            this.Hide();
+             string i =textBox1.Text;
+            Form1.xx = i;
+            this.Close();
         }
     }
 }

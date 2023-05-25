@@ -22,8 +22,11 @@ namespace _21an_Projekt_grafiskt
             
         }
       
-            public static int yy = 0;
-           
+        //Variablar för andra forms 
+
+         
+        //Senast vinnare
+            public static string xx ="Ingen vinnare";
         
         
            
@@ -38,18 +41,18 @@ namespace _21an_Projekt_grafiskt
         int o = 21;
 
         //Random varaiblar
-        int a = 1;
-        int b = 11;
+      public static  int a = 11;
+       public static int b = 1;
         Random random = new Random();
 
         //Spelet
         private void button1_Click(object sender, EventArgs e)
         {
             
-            int s = random.Next(a, b);
-            int p = random.Next(a, b);
-            int y = random.Next(a, b);
-            int g = random.Next(a, b);
+            int s = random.Next(b, a);
+            int p = random.Next(b, a);
+            int y = random.Next(b, a);
+            int g = random.Next(b, a);
             int j = s + p;
             int k = g + j;
             DialogResult result;
@@ -64,10 +67,10 @@ namespace _21an_Projekt_grafiskt
                     //Dragning av fler kort
 
                     DialogResult result2;
-                    result2 = MessageBox.Show("Vill du dra ett kort till?", "Fler kort?", MessageBoxButtons.YesNo, MessageBoxIcon.None);
+                    result2 = MessageBox.Show("                                             Spelare: " + j + "            Dator: " + k + "                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Vill du dra ett kort till?", "Fler kort?", MessageBoxButtons.YesNo, MessageBoxIcon.None);
                     if (result2 == DialogResult.Yes)
                     {
-                        int u = random.Next(a, b);
+                        int u = random.Next(b, a);
                         j = j + u;
                         MessageBox.Show("      Spelare: " + j + "        Dator: " + k, "Poäng", MessageBoxButtons.OK, MessageBoxIcon.None);
                         if (j > o)
@@ -86,6 +89,8 @@ namespace _21an_Projekt_grafiskt
                         {
                             MessageBox.Show("Datorn gick över gränsen för maxantal poäng, du vann", "Du vann", MessageBoxButtons.OK, MessageBoxIcon.None);
                             w = 0;
+                            var myformm = new Form4();
+                            myformm.ShowDialog();
                             break;
 
                         }
@@ -101,7 +106,7 @@ namespace _21an_Projekt_grafiskt
                         MessageBox.Show("Nu är det datorns tur att dra kort", "Datorns tur", MessageBoxButtons.OK, MessageBoxIcon.None);
                         while (true)
                         {
-                            int v = random.Next(a, b);
+                            int v = random.Next(b, a);
                             k = v + k;
                             MessageBox.Show("      Spelare: " + j + "        Dator: " + k, "Poäng", MessageBoxButtons.OK, MessageBoxIcon.None);
 
@@ -111,6 +116,8 @@ namespace _21an_Projekt_grafiskt
                             {
                                 MessageBox.Show("Datorn gick över gränsen för maxantal poäng, du vann", "Du vann", MessageBoxButtons.OK, MessageBoxIcon.None);
                                 w = 0;
+                                var myformm = new Form4();
+                                myformm.ShowDialog();
                                 break;
 
                             }
@@ -160,7 +167,7 @@ namespace _21an_Projekt_grafiskt
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(yy+ "     h","test");
+            MessageBox.Show( xx + "     h","test");
         }
     }
     
