@@ -75,6 +75,7 @@
             this.button20.TabIndex = 7;
             this.button20.Text = "Vem vinner om det är lika?";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button30
             // 

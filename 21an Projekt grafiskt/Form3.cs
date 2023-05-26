@@ -36,10 +36,18 @@ namespace _21an_Projekt_grafiskt
             
            
         }
-
+        //Svårighetsgrad
         private void button10_Click(object sender, EventArgs e)
         {
+            var mmyform = new Form7();
+            mmyform.ShowDialog();
+        }
 
+        //Vem vinner om det är lika
+        private void button20_Click(object sender, EventArgs e)
+        {
+            var mmyyform = new Form6();
+            mmyyform.ShowDialog();
         }
         //Stänga ned inställningar
 

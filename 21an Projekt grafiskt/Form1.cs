@@ -22,16 +22,31 @@ namespace _21an_Projekt_grafiskt
             
         }
       
-        //Variablar för andra forms 
+        //Variablar för andra forms (inställningar)
 
          
         //Senast vinnare
             public static string xx ="Ingen vinnare";
+
+        //Vem vinner om det är lika?
+        public static int pp = 0;
+        public static int nn = 0;
+
+        //svårighetsgrad
+        //lätt
+        int uu =12;
+        public static int mm = 0;
+        //Medel
+        int w = 15;
+        public static int åå = 0;
+        //Svårt
+        int ee = 18;
+        public static int zz = 0;
+         
+        
+         
         
         
-           
-        
-       
       
         Form2 ac = new Form2();
       
@@ -54,7 +69,7 @@ namespace _21an_Projekt_grafiskt
             int y = random.Next(b, a);
             int g = random.Next(b, a);
             int j = s + p;
-            int k = g + j;
+            int k = g + y;
             DialogResult result;
            result = MessageBox.Show( "      Spelare: " + j + "        Dator: " + k,"Poäng"  , MessageBoxButtons.OK, MessageBoxIcon.None);
             if (result == DialogResult.OK)
@@ -81,7 +96,7 @@ namespace _21an_Projekt_grafiskt
 
                         u = 0;
                     }
-                    //Datorn drar kort
+                    //Datorns tur
                     if (result2 != DialogResult.Yes)
                     {
                         //Kollar ifall du eller datorn redan har vunnit
@@ -102,13 +117,20 @@ namespace _21an_Projekt_grafiskt
                             break; 
 
                         }
+                       
 
+
+                        
                         MessageBox.Show("Nu är det datorns tur att dra kort", "Datorns tur", MessageBoxButtons.OK, MessageBoxIcon.None);
                         while (true)
                         {
+
+                            //Datorn drar kort
+
                             int v = random.Next(b, a);
                             k = v + k;
                             MessageBox.Show("      Spelare: " + j + "        Dator: " + k, "Poäng", MessageBoxButtons.OK, MessageBoxIcon.None);
+
 
 
                             //Kollar ifal du eller datorn har vunnit
@@ -116,20 +138,68 @@ namespace _21an_Projekt_grafiskt
                             {
                                 MessageBox.Show("Datorn gick över gränsen för maxantal poäng, du vann", "Du vann", MessageBoxButtons.OK, MessageBoxIcon.None);
                                 w = 0;
+                                // visar form för att skriva in sitt namn
                                 var myformm = new Form4();
                                 myformm.ShowDialog();
                                 break;
 
                             }
+                            //Datorn får mer poäng än dig
                             else if (k > j)
                             {
                                 MessageBox.Show("Datorn fick mer poäng än dig, du förlorade", "Du förlorade", MessageBoxButtons.OK, MessageBoxIcon.None);
 
                                 w = 0;
-                                break; //
+                                break; 
                                 
                             }
-                           
+                            //vem vinner om det är lika
+
+                            //Datorn
+                            else if (k == j && pp == 1)
+                            {
+                                MessageBox.Show("Båda spelare har lika mycket poäng, du förlorade", "Du förlorade", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+                                w = 0;
+                                break;
+                            }
+                            //Spelaren
+                            else if (k == j & nn == 1)
+                            {
+                                MessageBox.Show("Båda spelare har lika mycket poäng, du vann", "Du vann", MessageBoxButtons.OK, MessageBoxIcon.None);
+                                var myformm = new Form4();
+                                myformm.ShowDialog();
+                                w = 0; 
+                                break;
+                            }
+                            //vinnarmedelande för lätt
+                           else if (k >= uu  && mm == 1 && k < j)
+                            {
+                                MessageBox.Show("Datorn får inte dra fler kort, du vann", "Du vann", MessageBoxButtons.OK, MessageBoxIcon.None);
+                                var myformm = new Form4();
+                                myformm.ShowDialog();
+                                w = 0;
+                                break;
+                            }
+                            //vinnarmedelande för medel
+                            else if (k >= w && åå == 1 && k < j)
+                            {
+                                MessageBox.Show("Datorn får inte dra fler kort, du vann", "Du vann", MessageBoxButtons.OK, MessageBoxIcon.None);
+                                var myformm = new Form4();
+                                myformm.ShowDialog();
+                                w = 0;
+                                break;
+                               
+                            }
+                            //vinnarmedelande för svårt
+                            else if (k >= ee && zz == 1 && k < j)
+                            {
+                                MessageBox.Show("Datorn får inte dra fler kort, du vann", "Du vann", MessageBoxButtons.OK, MessageBoxIcon.None);
+                                var myformm = new Form4();
+                                myformm.ShowDialog();
+                                w = 0;
+                                break;
+                            }
                         }
                     }
                 
@@ -149,6 +219,7 @@ namespace _21an_Projekt_grafiskt
 
         
         //Instälningar
+
         private void button2_Click(object sender, EventArgs e)
         {
             var myform =new Form3();
@@ -165,10 +236,8 @@ namespace _21an_Projekt_grafiskt
             myform.ShowDialog();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show( xx + "     h","test");
-        }
+        //test
+        
     }
     
     
