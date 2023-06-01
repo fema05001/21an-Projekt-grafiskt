@@ -34,7 +34,7 @@ namespace _21an_Projekt_grafiskt
             int cc =int.Parse(textBox1.Text);
             int bb =int.Parse(textBox2.Text);
             Form1.b = cc;
-            Form1.a = bb;
+            Form1.a = bb +1;
         }
     }
 }
